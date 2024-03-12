@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "normalize.css";
+import { Logo } from "./logo.js";
+import { Menu } from "./menu.js";
+import { Phone } from "./phone.js";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <header className="header">
+        <div
+          className="container header-container"
+          style={{ background: "black" }}
         >
-          Learn React
-        </a>
+          <Logo />
+          <Menu />
+          <Phone />
+          <h1 className="header__title">Создаю условия для вашего успеха</h1>
+          <p className="header__appeal">Ваш успех зависит от ваших действий</p>
+        </div>
       </header>
-    </div>
+    </>
   );
 }
-
-export default App;
