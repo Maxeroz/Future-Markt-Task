@@ -63,19 +63,20 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Raleway, sans-serif;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #123056;
-  color: #fff;
-  background-image: url(./img/background.svg);
+  /* background-color: #123056; */
+  /* background-image: url(./img/background.svg);
   background-size: 320px;
   background-position: top;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+
+  color: #fff;
 }
 
 img,
@@ -137,13 +138,13 @@ footer {
 }
 
 .container {
-  max-width: calc(var(--container) + (var(--padding-container) * 2));
+  /* max-width: calc(var(--container) + (var(--padding-container) * 2));
   padding: var(--padding-container);
-  margin: 0 auto;
+  margin: 0 auto; */
 }
 
 .header {
-  padding: 20px 16px 0px 16px;
+  /* padding: 20px 16px 0px 16px; */
 }
 
 .header-container {
@@ -160,7 +161,7 @@ footer {
 }
 
 .header__logo {
-  margin-right: 98px;
+  margin-right: 100px;
   width: 96px;
   color: #fff;
 }
@@ -193,7 +194,9 @@ footer {
 
 .full_btn {
   display: flex;
-  margin-left: -2px;
+  width: 126px;
+  /* margin-left: -2px; */
+  margin-bottom: 16px;
 }
 
 .btn__white {
@@ -205,10 +208,10 @@ footer {
   max-width: 126px;
   max-height: 30px;
   color: #07305d;
-  padding: 9px 21px;
   border-right: solid 1.6px;
   border-color: #0b3461;
-  margin-bottom: 16px;
+
+  flex: 1;
 }
 
 .btn__other {
@@ -216,11 +219,10 @@ footer {
   font-weight: 600;
   max-width: 126px;
   max-height: 30px;
-  padding: 9px 9px;
   border: solid 1px;
   border-color: #fff;
   color: #fff;
-  text-align: left;
+  flex: 1;
 }
 
 .btn__white-square {
@@ -245,7 +247,6 @@ footer {
   border-color: #fff;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-bottom: 92px;
 }
 
 .vector__blue {
@@ -261,13 +262,13 @@ footer {
 }
 
 .footer {
+  margin-top: 76px;
   display: flex;
 }
 
 .infoText {
-  margin-left: -2px;
   padding-left: 8px;
-  margin-right: 53px;
+  margin-right: 50px;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   font-weight: 600;
   line-height: 141.3%;
@@ -285,5 +286,30 @@ footer {
   font-weight: 400;
 }
 
+.main__page {
+  background-image: url(./img/background.svg);
+  background-size: 320px;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: #123056;
+  width: 320px;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 20px 16px 0px 16px;
+}
+
+.callModal {
+  background-color: #0f1d45;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
 @media (min-width: 480px) {
+  body {
+    /* max-width: 480px; */
+    /* background-size: 480px; */
+  }
+  .container {
+    /* max-width: 480px; */
+  }
 }
