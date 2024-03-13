@@ -1,5 +1,30 @@
 @import-normalize;
 
+/* raleway-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/raleway-v29-cyrillic_latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* raleway-600 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/raleway-v29-cyrillic_latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* raleway-800 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./fonts/raleway-v29-cyrillic_latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
   --container: 320px;
   --padding-container: 0px;
@@ -20,10 +45,15 @@ body {
   min-width: 100vh;
   background-color: #123056;
   color: #fff;
+  background-image: url(./img/background.svg);
+  background-size: 320px;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 img,
 svg {
+  /* display: block; */
   height: auto;
   max-width: 100%;
   max-height: 100%;
@@ -55,10 +85,19 @@ figure {
   margin: 0;
 }
 
+h1 {
+  text-transform: uppercase;
+  max-width: 252px;
+}
+
 fieldset {
   margin: 0;
   padding: 0;
   bottom: 0;
+}
+
+main {
+  width: 286px;
 }
 
 .visually-hidden {
@@ -70,4 +109,83 @@ fieldset {
   max-width: calc(var(--container) + (var(--padding-container) * 2));
   padding: var(--padding-container);
   margin: 0 auto;
+}
+
+.header {
+  padding: 20px 16px 0px 16px;
+}
+
+.header-container {
+  width: 286px;
+  height: 40px;
+  display: flex;
+  margin-bottom: 65px;
+  /* justify-content: space-between; */
+}
+
+.header__menu {
+  margin-left: 100px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.header__logo {
+  width: 96px;
+  color: #fff;
+}
+
+.header__phone {
+  cursor: pointer;
+}
+
+.header__title {
+  margin-bottom: 35px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 135.3%;
+  text-align: left;
+}
+
+.header__appeal {
+  font-size: 11px;
+  font-weight: 400;
+  max-width: 154px;
+  opacity: 0.5;
+  text-align: left;
+  line-height: 150%;
+  margin-bottom: 50px;
+}
+
+.full_btn {
+  display: flex;
+}
+
+.btn__white {
+  /* line-height: 122.8; */
+  background-color: #fff;
+  font-size: 10px;
+  text-align: center;
+  font-weight: 600;
+  max-width: 126px;
+  max-height: 30px;
+  color: #07305d;
+  padding: 9px 20px;
+  border-right: solid 1.6px;
+  border-color: #0b3461;
+}
+
+.btn__white-square {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  cursor: pointer;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.vector__blue {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px 5px 0;
 }

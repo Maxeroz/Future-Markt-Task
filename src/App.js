@@ -4,6 +4,7 @@ import { Menu } from "./menu.js";
 import { Phone } from "./phone.js";
 import WebFont from "webfontloader";
 import { useEffect } from "react";
+import { Main } from "./main.js";
 
 export default function App() {
   useEffect(() => {
@@ -21,9 +22,8 @@ export default function App() {
           <Logo />
           <Menu />
           <Phone />
-          <h1 className="header__title">Создаю условия для вашего успеха</h1>
-          <p className="header__appeal">Ваш успех зависит от ваших действий</p>
         </div>
+        <Main />
       </header>
     </>
   );
