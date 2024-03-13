@@ -5,6 +5,7 @@ import { Phone } from "./phone.js";
 import WebFont from "webfontloader";
 import { useEffect } from "react";
 import { Main } from "./main.js";
+import { Footer } from "./footer.js";
 
 export default function App() {
   useEffect(() => {
@@ -23,8 +24,9 @@ export default function App() {
           <Menu />
           <Phone />
         </div>
-        <Main />
       </header>
+      <Main />
+      <Footer />
     </>
   );
 }

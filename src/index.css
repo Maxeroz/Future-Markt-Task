@@ -25,8 +25,35 @@
   src: url("./fonts/raleway-v29-cyrillic_latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* montserrat-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/montserrat-v26-cyrillic_latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* montserrat-600 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/montserrat-v26-cyrillic_latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-800 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./fonts/montserrat-v26-cyrillic_latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
-  --container: 320px;
+  --container: 332px;
   --padding-container: 0px;
   box-sizing: border-box;
   /* position: relative;
@@ -100,6 +127,10 @@ main {
   width: 286px;
 }
 
+footer {
+  width: 286px;
+}
+
 .visually-hidden {
   position: fixed;
   transform: scale(0);
@@ -124,8 +155,8 @@ main {
 }
 
 .header__menu {
-  margin-left: 100px;
-  margin-right: 10px;
+  margin-left: 98px;
+  margin-right: 12px;
   cursor: pointer;
 }
 
@@ -158,6 +189,7 @@ main {
 
 .full_btn {
   display: flex;
+  margin-left: -2px;
 }
 
 .btn__white {
@@ -169,23 +201,82 @@ main {
   max-width: 126px;
   max-height: 30px;
   color: #07305d;
-  padding: 9px 20px;
+  padding: 9px 21px;
   border-right: solid 1.6px;
   border-color: #0b3461;
+  margin-bottom: 16px;
+}
+
+.btn__other {
+  font-size: 10px;
+  font-weight: 600;
+  max-width: 126px;
+  max-height: 30px;
+  padding: 9px 9px;
+  border: solid 1px;
+  border-color: #fff;
+  color: #fff;
+  text-align: left;
 }
 
 .btn__white-square {
   display: flex;
   width: 30px;
-  height: 30px;
+  height: 29.5px;
   background-color: #fff;
   cursor: pointer;
   align-items: flex-end;
   justify-content: flex-end;
 }
 
+.btn__trans-square {
+  display: flex;
+  width: 30px;
+  height: 29.5px;
+  background-color: transparent;
+  cursor: pointer;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-color: #fff;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 92px;
+}
+
 .vector__blue {
   width: 8px;
   height: 8px;
   margin: 0 5px 5px 0;
+}
+
+.vector__white {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px 5px 0;
+}
+
+.footer {
+  display: flex;
+}
+
+.infoText {
+  margin-left: -2px;
+  padding-left: 8px;
+  margin-right: 53px;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  line-height: 141.3%;
+}
+
+.text {
+  font-family: "Montserrat";
+  font-size: 16px;
+}
+
+.shadowText {
+  display: block;
+  font-size: 10px;
+  opacity: 0.5;
+  font-weight: 400;
 }
