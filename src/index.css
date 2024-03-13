@@ -139,7 +139,7 @@ footer {
 .container {
   max-width: calc(var(--container) + (var(--padding-container) * 2));
   padding: var(--padding-container);
-  margin: 0 17px;
+  margin: 0 auto;
 }
 
 .header {
