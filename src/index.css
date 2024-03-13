@@ -227,8 +227,8 @@ footer {
 
 .btn__white-square {
   display: flex;
-  width: 30px;
-  height: 29.5px;
+  width: 28px;
+  height: 28px;
   background-color: #fff;
   cursor: pointer;
   align-items: flex-end;
@@ -237,8 +237,8 @@ footer {
 
 .btn__trans-square {
   display: flex;
-  width: 30px;
-  height: 29.5px;
+  width: 28px;
+  height: 28px;
   background-color: transparent;
   cursor: pointer;
   border-top: 1px solid;
@@ -287,6 +287,7 @@ footer {
 }
 
 .main__page {
+  max-height: 600px;
   background-image: url(./img/background.svg);
   background-size: 320px;
   background-position: top;
@@ -298,10 +299,100 @@ footer {
   padding: 20px 16px 0px 16px;
 }
 
-.callModal {
-  background-color: #0f1d45;
-  min-width: 320px;
+/* Call Modal */
+
+.call-modal-background {
+  width: 320px;
   min-height: 100vh;
+  max-height: 600px;
+  background-color: #0f1d45;
+}
+
+.call-modal {
+  padding: 24px 34px 236px 34px;
+}
+
+.call-modal-title {
+  margin-top: 46px;
+  width: 260px;
+}
+
+.form-call-modal {
+  margin-top: 49px;
+  font-family: "Montserrat";
+}
+
+.form-call-phone {
+  margin-top: 49px;
+}
+
+.text-input {
+  height: 20px;
+  line-height: 122.8%;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  font-size: 12px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+}
+
+.call-modal-title h2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 148.8%;
+}
+
+.form-call-div {
+  display: flex;
+  margin-top: 30px;
+  align-items: flex-start;
+}
+
+.input-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  line-height: 128.8%;
+  margin-left: 17px;
+  /* letter-spacing: 1px; */
+}
+
+.form-real-checkbox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.form-real-checkbox:checked + .custom-checkbox::before {
+  transform: translate(-50%, 7%) scale(1);
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border: 0.71px solid rgba(255, 255, 255, 0.7);
+}
+
+.custom-checkbox::before {
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-image: url("./img/check-icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 7%) scale(0);
+
+  transition: 0.2s ease-in;
 }
 
 @media (min-width: 480px) {

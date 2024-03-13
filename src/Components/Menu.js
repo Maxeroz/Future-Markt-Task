@@ -1,4 +1,4 @@
-import menu from "./img/menu.svg";
+import menu from "../img/menu.svg";
 
 export function Menu() {
   return (

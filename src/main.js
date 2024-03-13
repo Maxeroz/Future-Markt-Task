@@ -14,7 +14,7 @@ export function Main() {
         vector={vectorBlue}
         vectorStyle={"vector__blue"}
       >
-        Привет
+        Записаться
       </Button>
       <Button
         style={"btn__other"}

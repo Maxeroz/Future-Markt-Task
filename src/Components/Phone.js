@@ -1,4 +1,4 @@
-import phone from "./img/phone.svg";
+import phone from "../img/phone.svg";
 
 export function Phone() {
   return (
