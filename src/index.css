@@ -69,7 +69,7 @@
 body {
   font-family: Raleway, sans-serif;
   min-width: 320px;
-  min-width: 100vh;
+  min-height: 100vh;
   background-color: #123056;
   color: #fff;
   background-image: url(./img/background.svg);
