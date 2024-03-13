@@ -1,3 +1,6 @@
+import { Button } from "./Button";
+import vectorWhite from "../img/vectorWhite.svg";
+
 export function CallModal() {
   return (
     <div className="call-modal-background">
@@ -29,6 +32,16 @@ export function CallModal() {
             </span>
           </label>
         </form>
+        <Button
+          style={"btn__other__call"}
+          square={"btn__trans-square"}
+          userStyle={{ height: "45px", width: "45px" }}
+          vector={vectorWhite}
+          vectorStyle={"vector__white"}
+          mainClass={"full_btn_call"}
+        >
+          Заказать обратный звонок
+        </Button>
       </div>
     </div>
   );

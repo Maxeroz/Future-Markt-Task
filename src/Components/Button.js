@@ -5,9 +5,10 @@ export function Button({
   vector,
   vectorStyle,
   userStyle,
+  mainClass,
 }) {
   return (
-    <div className="full_btn">
+    <div className={mainClass}>
       <button className={style}>{children}</button>
       <div className={square} style={userStyle}>
         <img src={vector} className={vectorStyle}></img>

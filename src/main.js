@@ -1,4 +1,4 @@
-import { Button } from "./button";
+import { Button } from "./Components/Button";
 import vectorBlue from "./img/vectorBlue.svg";
 import vectorWhite from "./img/vectorWhite.svg";
 
@@ -13,6 +13,7 @@ export function Main() {
         square={"btn__white-square"}
         vector={vectorBlue}
         vectorStyle={"vector__blue"}
+        mainClass={"full_btn"}
       >
         Записаться
       </Button>
@@ -22,6 +23,7 @@ export function Main() {
         userStyle={{ height: "30px" }}
         vector={vectorWhite}
         vectorStyle={"vector__white"}
+        mainClass={"full_btn"}
       >
         Заказать звонок
       </Button>
