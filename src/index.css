@@ -155,14 +155,18 @@ footer {
 }
 
 .header__menu {
-  margin-left: 98px;
-  margin-right: 12px;
+  /* margin-right: 12px; */
   cursor: pointer;
 }
 
 .header__logo {
+  margin-right: 98px;
   width: 96px;
   color: #fff;
+}
+
+.space__div {
+  width: 12px;
 }
 
 .header__phone {

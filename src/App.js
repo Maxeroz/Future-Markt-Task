@@ -22,6 +22,7 @@ export default function App() {
         <div className="container header-container">
           <Logo />
           <Menu />
+          <div className="space__div"></div>
           <Phone />
         </div>
       </header>
