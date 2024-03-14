@@ -1,7 +1,7 @@
 import { Button } from "./Button";
 import vectorWhite from "../img/vectorWhite.svg";
 import crossSmall from "../img/cross_small.svg";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 {
   /* <div
@@ -15,6 +15,12 @@ export function CallModal({ active, closeModal }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+
+  const inputEl = useRef(null);
+
+  useEffect(() => {
+    inputEl.current.focus();
+  }, [active]);
 
   return (
     // <div className="call-modal-background">
@@ -44,6 +50,7 @@ export function CallModal({ active, closeModal }) {
               className="text-input"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              ref={inputEl}
             />
             <input
               name="phone"
