@@ -1,10 +1,21 @@
 import { Button } from "./Button";
 import vectorWhite from "../img/vectorWhite.svg";
+import crossSmall from "../img/cross_small.svg";
 
-export function CallModal() {
+export function CallModal({ active, closeModal }) {
   return (
-    <div className="call-modal-background">
+    // <div className="call-modal-background">
+    <div
+      className={
+        active ? "call-modal-background active" : '"call-modal-background"'
+      }
+    >
       <div className="call-modal">
+        <div className="cross__small">
+          <button onClick={closeModal}>
+            <img src={crossSmall} />
+          </button>
+        </div>
         <div className="call-modal-title">
           <h2>
             Закажите

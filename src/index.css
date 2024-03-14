@@ -320,10 +320,18 @@ footer {
 /* Call Modal */
 
 .call-modal-background {
+  position: fixed;
+  inset: 0;
   width: 320px;
   min-height: 100vh;
   max-height: 600px;
   background-color: #0f1d45;
+  transform: scale(0);
+  /* display: none; */
+}
+
+.call-modal-background.active {
+  transform: scale(1);
 }
 
 .call-modal {
@@ -331,7 +339,7 @@ footer {
 }
 
 .call-modal-title {
-  margin-top: 46px;
+  margin-top: 36px;
   width: 260px;
 }
 
@@ -416,6 +424,11 @@ footer {
   transform: translate(-50%, 7%) scale(0);
 
   transition: 0.2s ease-in;
+}
+
+.cross__small {
+  /* display: block; */
+  text-align: right;
 }
 
 @media (min-width: 480px) {

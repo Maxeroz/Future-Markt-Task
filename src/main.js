@@ -2,7 +2,9 @@ import { Button } from "./Components/Button";
 import vectorBlue from "./img/vectorBlue.svg";
 import vectorWhite from "./img/vectorWhite.svg";
 
-export function Main() {
+import { useEffect, useState } from "react";
+
+export function Main({ handleOnClick }) {
   return (
     <main className="container">
       <h1 className="header__title">Создаю условия для вашего успеха</h1>
@@ -24,6 +26,7 @@ export function Main() {
         vector={vectorWhite}
         vectorStyle={"vector__white"}
         mainClass={"full_btn"}
+        handler={handleOnClick}
       >
         Заказать звонок
       </Button>

@@ -3,14 +3,17 @@ import { Logo } from "./Components/Logo.js";
 import { Menu } from "./Components/Menu.js";
 import { Phone } from "./Components/Phone.js";
 import WebFont from "webfontloader";
-import { useEffect, useState } from "react";
 import { Main } from "./main.js";
 import { Footer } from "./footer.js";
 import { CallModal } from "./Components/CallModal.js";
+import { useEffect, useState } from "react";
 
 export default function App() {
-  const [isCallOpen, setIsCallOpen] = useState(true);
+  const [isCallOpen, setIsCallOpen] = useState(false);
 
+  function handleOnClick() {
+    setIsCallOpen((is) => !is);
+  }
   // useEffect(() => {
   //   WebFont.load({
   //     google: {
@@ -20,8 +23,7 @@ export default function App() {
   // }, []);
 
   return (
-    <>
-      <CallModal />
+    <div>
       <div className="main__page">
         <header className="header">
           <div className="container header-container">
@@ -31,9 +33,13 @@ export default function App() {
             <Phone />
           </div>
         </header>
-        <Main />
+        <Main handleOnClick={handleOnClick} />
         <Footer />
       </div>
-    </>
+      <CallModal
+        active={isCallOpen}
+        closeModal={() => setIsCallOpen((is) => !is)}
+      />
+    </div>
   );
 }
