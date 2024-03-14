@@ -357,6 +357,9 @@ footer {
 }
 
 .text-input {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  text-decoration: none;
   box-shadow: none;
   height: 20px;
   line-height: 122.8%;
