@@ -3,7 +3,7 @@ import { Logo } from "./Components/Logo.js";
 import { Menu } from "./Components/Menu.js";
 import { Phone } from "./Components/Phone.js";
 import WebFont from "webfontloader";
-import { Main } from "./main.js";
+import { Main } from "./Components/Main.js";
 import { Footer } from "./footer.js";
 import { CallModal } from "./Components/CallModal.js";
 import { useEffect, useState } from "react";
@@ -29,7 +29,7 @@ export default function App() {
           <div className="container header-container">
             <Logo />
             <Menu />
-            <div className="space__div"></div>
+            {/* <div className="space__div"></div> */}
             <Phone />
           </div>
         </header>

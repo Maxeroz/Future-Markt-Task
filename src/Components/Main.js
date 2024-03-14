@@ -1,6 +1,6 @@
-import { Button } from "./Components/Button";
-import vectorBlue from "./img/vectorBlue.svg";
-import vectorWhite from "./img/vectorWhite.svg";
+import { Button } from "./Button";
+import vectorBlue from "../img/vectorBlue.svg";
+import vectorWhite from "../img/vectorWhite.svg";
 
 import { useEffect, useState } from "react";
 
@@ -8,7 +8,13 @@ export function Main({ handleOnClick }) {
   return (
     <main className="container">
       <h1 className="header__title">Создаю условия для вашего успеха</h1>
-      <p className="header__appeal">Ваш успех зависит от ваших действий</p>
+      <p className="header__appeal__phone">
+        Ваш успех зависит от ваших действий
+      </p>
+      <p className="header__appeal">
+        Когда ваше время и энергия лучше сфокусированы, стремление к новым
+        возможностям становится реальностью, ваш успех зависит от ваших действий
+      </p>
 
       <Button
         style={"btn__white"}
