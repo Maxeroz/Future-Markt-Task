@@ -4,7 +4,7 @@ import { Menu } from "./Components/Menu.js";
 import { Phone } from "./Components/Phone.js";
 import WebFont from "webfontloader";
 import { Main } from "./Components/Main.js";
-import { Footer } from "./footer.js";
+import { Footer } from "./Components/Footer.js";
 import { CallModal } from "./Components/CallModal.js";
 import { useEffect, useState } from "react";
 

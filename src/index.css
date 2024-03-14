@@ -305,6 +305,9 @@ footer {
 }
 
 .infoText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   padding-left: 8px;
   margin-right: 50px;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
@@ -317,8 +320,16 @@ footer {
   font-size: 16px;
 }
 
+.shadowText__mobile {
+  display: none;
+  line-height: 122.8%;
+  font-size: 16px;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
 .shadowText {
-  display: block;
+  display: none;
   font-size: 10px;
   opacity: 0.5;
   font-weight: 400;
@@ -496,6 +507,15 @@ nav ul li {
   /* padding: 0px 8px; */
 }
 
+nav ul li a {
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: black;
+  transition: 0.3s;
+}
+
 .phone__number__logo {
   display: none;
   font-family: "Montserrat";
@@ -506,6 +526,9 @@ nav ul li {
 
 @media (min-width: 0px) {
   .header__appeal__phone {
+    display: block;
+  }
+  .shadowText__mobile {
     display: block;
   }
 }
@@ -581,6 +604,7 @@ nav ul li {
   }
 
   .buttons {
+    height: 71px;
     display: flex;
     gap: 40px;
   }
@@ -604,6 +628,7 @@ nav ul li {
   .btn__white-square {
     width: 72px;
     height: 71px;
+    margin-left: auto;
   }
 
   .btn__trans-square {
@@ -621,5 +646,25 @@ nav ul li {
     width: 20px;
     height: 20px;
     margin: 0 10px 10px 0;
+  }
+  .footer {
+    margin-top: 105px;
+  }
+
+  .infoText {
+    padding-left: 24px;
+    height: 137px;
+  }
+
+  .infoText .text {
+    font-size: 40px;
+  }
+
+  .shadowText__mobile {
+    display: none;
+  }
+
+  .shadowText {
+    display: block;
   }
 }
