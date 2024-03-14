@@ -1,6 +1,7 @@
 import { Button } from "./Button";
 import vectorWhite from "../img/vectorWhite.svg";
 import crossSmall from "../img/cross_small.svg";
+import { useState } from "react";
 
 {
   /* <div
@@ -11,6 +12,10 @@ import crossSmall from "../img/cross_small.svg";
 }
 
 export function CallModal({ active, closeModal }) {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
     // <div className="call-modal-background">
     <div
@@ -32,17 +37,27 @@ export function CallModal({ active, closeModal }) {
           </h2>
         </div>
         <form className="form-call-modal">
-          <input name="name" placeholder="Имя" className="text-input" />
+          <input
+            name="name"
+            placeholder="ИМЯ"
+            className="text-input"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
           <input
             name="phone"
-            placeholder="Телефон"
+            placeholder="ТЕЛЕФОН"
             className="form-call-phone text-input"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
           />
           <label className="form-call-div">
             <input
               type="checkbox"
               name="myCheckBox"
               className="form-real-checkbox"
+              checked={isChecked}
+              onChange={() => setIsChecked((is) => !is)}
             />
             <span className="custom-checkbox"></span>
             <span className="input-text">
