@@ -359,8 +359,10 @@ footer {
 .text-input {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-appearance: none;
   text-decoration: none;
   box-shadow: none;
+  border-radius: 0;
   height: 20px;
   line-height: 122.8%;
   width: 100%;
