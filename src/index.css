@@ -321,8 +321,8 @@ footer {
 
 .call-modal-background {
   height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* width: 100%; */
+  /* background-color: rgba(0, 0, 0, 0.4); */
   position: fixed;
   /* inset: 0; */
   top: 0;
@@ -331,8 +331,9 @@ footer {
   max-height: 600px;
   /* background-color: #0f1d45; */
   transform: scale(0);
-  transition: 0.1s;
-  backdrop-filter: blur(2px);
+
+  transition: 0.01s;
+  /* backdrop-filter: blur(2px); */
 }
 
 .call-modal-content {
@@ -447,32 +448,4 @@ footer {
 .cross__small {
   /* display: block; */
   text-align: right;
-}
-
-@media (min-width: 480px) {
-  .main__page {
-    padding-left: 32px;
-    min-width: 480px;
-    /* padding: 20px 240px 0px 240px; */
-    background-image: url(./img/background-480.svg);
-    background-size: 480px;
-  }
-  .header__logo {
-    margin-right: 180px;
-  }
-  .full_btn {
-    width: 167px;
-  }
-  .btn__white {
-    max-width: 167px;
-  }
-  .btn__other {
-    max-width: 167px;
-  }
-  .space__div {
-    width: 50px;
-  }
-  .infoText {
-    margin-right: 90px;
-  }
 }
