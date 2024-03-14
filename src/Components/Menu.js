@@ -6,23 +6,23 @@ const data = [
     title: "Обо мне",
   },
   {
-    id: 1,
+    id: 2,
     title: "Наставничество",
   },
   {
-    id: 1,
+    id: 3,
     title: "Мероприятия",
   },
   {
-    id: 1,
+    id: 4,
     title: "Кейсы",
   },
   {
-    id: 1,
+    id: 5,
     title: "Отзывы",
   },
   {
-    id: 1,
+    id: 6,
     title: "Контакты",
   },
 ];
@@ -35,7 +35,7 @@ export function Menu() {
           {data.map((obj) => {
             const { id, title } = obj;
             return (
-              <li>
+              <li key={id}>
                 <a href="#">{title}</a>
               </li>
             );

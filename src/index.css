@@ -579,4 +579,47 @@ nav ul li {
   .header__appeal__phone {
     display: none;
   }
+
+  .buttons {
+    display: flex;
+    gap: 40px;
+  }
+
+  .full_btn {
+    width: 380px;
+    height: 71px;
+  }
+  .btn__white {
+    max-width: unset;
+    max-height: unset;
+    font-size: 18px;
+  }
+
+  .btn__other {
+    max-width: unset;
+    max-height: unset;
+    font-size: 18px;
+  }
+
+  .btn__white-square {
+    width: 72px;
+    height: 71px;
+  }
+
+  .btn__trans-square {
+    width: 72px;
+    height: 71px;
+  }
+
+  .vector__blue {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 10px 0;
+  }
+
+  .vector__white {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 10px 0;
+  }
 }

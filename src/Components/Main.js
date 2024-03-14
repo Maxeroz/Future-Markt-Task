@@ -16,26 +16,28 @@ export function Main({ handleOnClick }) {
         возможностям становится реальностью, ваш успех зависит от ваших действий
       </p>
 
-      <Button
-        style={"btn__white"}
-        square={"btn__white-square"}
-        vector={vectorBlue}
-        vectorStyle={"vector__blue"}
-        mainClass={"full_btn"}
-      >
-        Записаться
-      </Button>
-      <Button
-        style={"btn__other"}
-        square={"btn__trans-square"}
-        userStyle={{ height: "30px" }}
-        vector={vectorWhite}
-        vectorStyle={"vector__white"}
-        mainClass={"full_btn"}
-        handler={handleOnClick}
-      >
-        Заказать звонок
-      </Button>
+      <div className="buttons">
+        <Button
+          style={"btn__white"}
+          square={"btn__white-square"}
+          vector={vectorBlue}
+          vectorStyle={"vector__blue"}
+          mainClass={"full_btn"}
+        >
+          Записаться на консультацию
+        </Button>
+        <Button
+          style={"btn__other"}
+          square={"btn__trans-square"}
+          // userStyle={{ height: "30px" }}
+          vector={vectorWhite}
+          vectorStyle={"vector__white"}
+          mainClass={"full_btn"}
+          handler={handleOnClick}
+        >
+          Заказать звонок
+        </Button>
+      </div>
     </main>
   );
 }
