@@ -9,10 +9,8 @@ export function Button({
   handler,
 }) {
   return (
-    <div className={mainClass}>
-      <button className={style} onClick={handler}>
-        {children}
-      </button>
+    <div className={mainClass} onClick={handler}>
+      <button className={style}>{children}</button>
       <div className={square} style={userStyle}>
         <img src={vector} className={vectorStyle}></img>
       </div>

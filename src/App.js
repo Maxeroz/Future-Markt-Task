@@ -23,7 +23,7 @@ export default function App() {
   // }, []);
 
   return (
-    <div>
+    <>
       <div className="main__page">
         <header className="header">
           <div className="container header-container">
@@ -40,6 +40,6 @@ export default function App() {
         active={isCallOpen}
         closeModal={() => setIsCallOpen((is) => !is)}
       />
-    </div>
+    </>
   );
 }
