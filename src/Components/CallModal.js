@@ -2,12 +2,20 @@ import { Button } from "./Button";
 import vectorWhite from "../img/vectorWhite.svg";
 import crossSmall from "../img/cross_small.svg";
 
+{
+  /* <div
+      className={
+        active ? "call-modal-background active" : '"call-modal-background"'
+      }
+    >*/
+}
+
 export function CallModal({ active, closeModal }) {
   return (
     // <div className="call-modal-background">
     <div
       className={
-        active ? "call-modal-background active" : '"call-modal-background"'
+        active ? "call-modal-background active" : "call-modal-background"
       }
     >
       <div className="call-modal">
