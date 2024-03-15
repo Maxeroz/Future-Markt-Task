@@ -2,6 +2,7 @@ import { Button } from "./Button";
 import vectorWhite from "../img/vectorWhite.svg";
 import crossSmall from "../img/cross_small.svg";
 import { useEffect, useRef, useState } from "react";
+import { act } from "react-dom/test-utils";
 
 {
   /* <div
@@ -17,10 +18,40 @@ export function CallModal({ active, closeModal }) {
   const [isChecked, setIsChecked] = useState(false);
 
   const inputEl = useRef(null);
+  const modalContainerEl = useRef(null);
 
   useEffect(() => {
     inputEl.current.focus();
   }, [active]);
+
+  useEffect(() => {
+    let handlerButton = (e) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    document.addEventListener("keydown", handlerButton);
+
+    return () => {
+      document.removeEventListener("keydown", handlerButton);
+    };
+  }, [closeModal]);
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!modalContainerEl.current.contains(e.target)) {
+        closeModal();
+        console.log(modalContainerEl);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, [closeModal]);
 
   return (
     // <div className="call-modal-background">
@@ -29,7 +60,7 @@ export function CallModal({ active, closeModal }) {
         active ? "call-modal-background active" : "call-modal-background"
       }`}
     >
-      <div className="call-modal-content">
+      <div className="call-modal-content" ref={modalContainerEl}>
         <div className="call-modal-container">
           <div className="cross__small">
             <button onClick={closeModal}>

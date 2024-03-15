@@ -36,10 +36,7 @@ export default function App() {
         <Main handleOnClick={handleOnClick} />
         <Footer />
       </div>
-      <CallModal
-        active={isCallOpen}
-        closeModal={() => setIsCallOpen((is) => !is)}
-      />
+      <CallModal active={isCallOpen} closeModal={() => setIsCallOpen(false)} />
     </>
   );
 }
