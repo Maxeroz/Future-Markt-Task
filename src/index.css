@@ -55,8 +55,10 @@
 :root {
   --container: 332px;
   --padding-container: 0px;
+  --background-color1: #123056;
+  --background-color2: #07305d;
+  --background-color3: #0b3461;
   box-sizing: border-box;
-  /* position: relative; */
   overflow-y: hidden;
 }
 
@@ -69,27 +71,15 @@
 body {
   height: 100vh;
   font-family: Raleway, sans-serif;
-  /* max-height: 600px; */
-
-  /* For 320 //////////////////////*/
-
-  /* background-image: url(./img/background.jpg); */
-  /* background-position: bottom 10% right 0%; */
-  /* background-position: top; */
   background-repeat: no-repeat;
-  /* background-size: unset; */
-
-  background-color: #123056;
+  background-color: var(--background-color1);
   min-width: 320px;
   color: #fff;
 }
 
 img,
 svg {
-  /* display: block; */
   height: auto;
-  /* max-width: 100%;
-  max-height: 100%; */
 }
 
 button {
@@ -142,20 +132,8 @@ footer {
   transform: scale(0);
 }
 
-.container {
-  /* max-width: calc(var(--container) + (var(--padding-container) * 2));
-  padding: var(--padding-container);
-  margin: 0 auto; */
-}
-
-.header {
-  /* display: flex; */
-  /* padding: 20px 16px 0px 16px; */
-  /* width: 100%; */
-}
-
+/* Header //////////////////////////////////////////////// */
 .header-container {
-  /* width: 286px; */
   height: 40px;
   display: flex;
   margin-bottom: 65px;
@@ -163,7 +141,6 @@ footer {
 }
 
 .header__menu__icon {
-  /* margin-right: 12px; */
   cursor: pointer;
 }
 
@@ -173,18 +150,8 @@ footer {
   color: #fff;
 }
 
-.space__div {
-  width: 12px;
-}
-
 .header__phone {
   cursor: pointer;
-}
-
-.phone-container {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
 }
 
 .header__title {
@@ -217,10 +184,21 @@ footer {
   margin-bottom: 50px;
 }
 
+.space__div {
+  width: 12px;
+}
+
+.phone-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* Buttons /////////////////////////////////////////////////// */
+
 .full_btn {
   display: flex;
   width: 126px;
-  /* margin-left: -2px; */
   margin-bottom: 16px;
 }
 
@@ -230,17 +208,15 @@ footer {
 }
 
 .btn__white {
-  /* line-height: 122.8; */
   background-color: #fff;
   font-size: 10px;
   text-align: center;
   font-weight: 600;
   max-width: 126px;
   max-height: 30px;
-  color: #07305d;
+  color: var(--background-color2);
   border-right: solid 1.6px;
-  border-color: #0b3461;
-
+  border-color: (--background-color3);
   flex: 1;
 }
 
@@ -252,20 +228,16 @@ footer {
   border: solid 1px;
   border-color: #fff;
   color: #fff;
-
   flex: 1;
 }
 
 .btn__other__call {
   font-size: 14px;
   font-weight: 600;
-  /* max-width: 251px; */
   height: 46px;
-  /* max-height: 30px; */
   border: solid 1px;
   border-color: #fff;
   color: #fff;
-
   flex: 1;
 }
 
@@ -305,6 +277,7 @@ footer {
   margin: 0 5px 5px 0;
 }
 
+/* Footer //////////////////////////////////////////////////////////// */
 .footer {
   margin-top: 92px;
   display: flex;
@@ -340,6 +313,7 @@ footer {
   opacity: 0.5;
   font-weight: 400;
 }
+/* Main Page //////////////////////////////////////////////////// */
 
 .main__page {
   background-image: url("./img/mentor_mobile.png"), url("./img/background.jpg");
@@ -350,10 +324,9 @@ footer {
   padding: 20px 16px 0px 16px;
   min-height: 600px;
   max-width: 320px;
-  /* background-color: #07305d; */
 }
 
-/* Call Modal */
+/* Call Modal //////////////////////////////////////////////////// */
 
 .call-modal-background {
   width: 100%;
@@ -386,9 +359,7 @@ footer {
 }
 
 .consult-modal-container {
-  /* background-image: url("./img/Consult_modal_bg.jpg"); */
   margin: 0 auto;
-  /* padding: 40px 82px 40px 82px; */
 }
 
 .call-modal-title {
@@ -396,14 +367,14 @@ footer {
   width: 260px;
 }
 
+/* Consult Modal ///////////////////////////////////////////// */
+
 .consult-modal-title {
-  /* margin-top: 120px; */
   text-align: center;
 }
 
 .consult-modal-title h2 {
   font-weight: 400;
-  /* font-size: 50px; */
   line-height: 157.8%;
 }
 
@@ -413,6 +384,8 @@ footer {
   font-weight: 400;
   line-height: 157.8%;
 }
+
+/* Form //////////////////////////////////////////////////////////////////// */
 
 .form-call-modal {
   margin-top: 49px;
@@ -434,7 +407,6 @@ footer {
   line-height: 122.8%;
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
-  /* text-transform: uppercase; */
   font-size: 12px;
   border: none;
   border-bottom: 1px solid #fff;
@@ -471,7 +443,6 @@ footer {
   line-height: 128.8%;
   margin-left: 17px;
   margin-bottom: 54px;
-  /* letter-spacing: 1px; */
 }
 
 .form-real-checkbox {
@@ -507,17 +478,14 @@ footer {
   background-image: url("./img/check-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
-
   position: absolute;
   left: 50%;
   right: 50%;
   transform: translate(-50%, 7%) scale(0);
-
   transition: 0.2s ease-in;
 }
 
 .cross__small {
-  /* display: block; */
   text-align: right;
 }
 
@@ -529,14 +497,14 @@ footer {
   transform: scale(1.2);
 }
 
+/* Navigation ///////////////////////////////////////////////////////////////// */
+
 .nav__menu {
   display: none;
   max-width: 100%;
-  /* width: 608px; */
   font-size: 14px;
   line-height: 122.8%;
   font-family: "Montserrat";
-  /* letter-spacing: 2px; */
 }
 
 nav ul {
@@ -547,7 +515,6 @@ nav ul {
 nav ul li {
   list-style-type: none;
   display: inline-block;
-  /* padding: 0px 8px; */
 }
 
 nav ul li a {
@@ -564,9 +531,9 @@ nav ul li a:hover {
   font-family: "Montserrat";
   margin-left: 14px;
   font-size: 18px;
-  /* width: 150px; */
 }
 
+/* Hiding Styles ///////////////////////////////////////////////////////// */
 .displayMobile {
   display: none;
 }
@@ -575,7 +542,7 @@ nav ul li a:hover {
   display: none;
 }
 
-/* Media ///////////////////////////////////////////////////////////////// */
+/* Media 0-320 ////////////////////////////////////////////////////////////// */
 
 @media (min-width: 0px) {
   .header__appeal__phone {
@@ -628,7 +595,9 @@ nav ul li a:hover {
   }
 }
 
-@media (min-width: 321px) {
+/* Media 1920 ////////////////////////////////////////////////////////////// */
+
+@media (min-width: 320px) {
   body {
     background-image: url("./img/mentor_desktop.png"),
       url("./img/desktop-bg.jpg");
@@ -644,14 +613,9 @@ nav ul li a:hover {
     padding-top: 40px;
     margin: 0 auto;
     width: 1320px;
-    /* width: 100%; */
     min-width: 1320px;
-    /* background-image: url("./img/desktop-bg.svg"); */
     background-size: auto;
-    /* padding: 40px 300px 0px 300px; */
-    /* margin: 0 auto; */
     font-weight: 200;
-    /* background-position: 0%; */
   }
 
   .space__div {
