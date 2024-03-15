@@ -39,6 +39,7 @@ export default function App() {
         <Footer />
       </div>
       <CallModal active={isCallOpen} closeModal={() => setIsCallOpen(false)} />
+
       {isConsultOpen ? (
         <ConsultModal
           active={isConsultOpen}

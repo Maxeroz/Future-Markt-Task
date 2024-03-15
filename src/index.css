@@ -70,10 +70,14 @@ body {
   height: 100vh;
   font-family: Raleway, sans-serif;
   /* max-height: 600px; */
-  background-image: url(./img/background.svg);
+
+  /* For 320 //////////////////////*/
+
+  /* background-image: url(./img/background.svg);
   background-size: 320px;
   background-position: top;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+
   background-color: #123056;
   min-width: 320px;
   color: #fff;
@@ -562,10 +566,14 @@ nav ul li a:hover {
 
 @media (min-width: 320px) {
   body {
-    background-image: url("./img/desktop-bg.svg");
-    background-size: 100%;
+    background-image: url("./img/mentor_desktop.png"),
+      url("./img/desktop-bg.jpg");
+    background-position: bottom -40px right 15%;
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
     max-height: 900px;
   }
+
   .main__page {
     padding: unset;
     padding-top: 40px;
