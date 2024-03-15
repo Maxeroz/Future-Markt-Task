@@ -4,7 +4,7 @@ import vectorWhite from "../img/vectorWhite.svg";
 
 import { useEffect, useState } from "react";
 
-export function Main({ handleOnClick }) {
+export function Main({ handleOnClickCall, handleOnClickConsult }) {
   return (
     <main className="container">
       <h1 className="header__title">Создаю условия для вашего успеха</h1>
@@ -23,6 +23,7 @@ export function Main({ handleOnClick }) {
           vector={vectorBlue}
           vectorStyle={"vector__blue"}
           mainClass={"full_btn"}
+          handler={handleOnClickConsult}
         >
           Записаться на консультацию
         </Button>
@@ -33,7 +34,7 @@ export function Main({ handleOnClick }) {
           vector={vectorWhite}
           vectorStyle={"vector__white"}
           mainClass={"full_btn"}
-          handler={handleOnClick}
+          handler={handleOnClickCall}
         >
           Заказать звонок
         </Button>

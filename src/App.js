@@ -13,33 +13,40 @@ export default function App() {
   const [isCallOpen, setIsCallOpen] = useState(false);
   const [isConsultOpen, setIsConsultOpen] = useState(false);
 
-  function handleOnClick() {
+  function handleOnClickCall() {
     setIsCallOpen((is) => !is);
   }
-  // useEffect(() => {
-  //   WebFont.load({
-  //     google: {
-  //       families: ["Raleway"],
-  //     },
-  //   });
-  // }, []);
+
+  function handleOnClickConsult() {
+    setIsConsultOpen((is) => !is);
+  }
 
   return (
     <>
       <div className="main__page">
         <header className="header">
           <div className="container header-container">
-            <Logo />
+            <Logo styleLogo={"header__logo"} />
             <Menu />
             {/* <div className="space__div"></div> */}
             <Phone />
           </div>
         </header>
-        <Main handleOnClick={handleOnClick} />
+        <Main
+          handleOnClickCall={handleOnClickCall}
+          handleOnClickConsult={handleOnClickConsult}
+        />
         <Footer />
       </div>
       <CallModal active={isCallOpen} closeModal={() => setIsCallOpen(false)} />
-      <ConsultModal active={isConsultOpen} />
+      {isConsultOpen ? (
+        <ConsultModal
+          active={isConsultOpen}
+          closeModal={() => setIsConsultOpen(false)}
+        />
+      ) : (
+        ""
+      )}
     </>
   );
 }

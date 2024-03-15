@@ -395,6 +395,13 @@ footer {
   line-height: 157.8%;
 }
 
+.consult-modal-title h3 {
+  margin-top: 98px;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 157.8%;
+}
+
 .form-call-modal {
   margin-top: 49px;
   font-family: "Montserrat";
@@ -590,6 +597,12 @@ nav ul li a:hover {
     height: 34px;
     width: 169px;
     margin-right: 187px;
+  }
+
+  .consult__modal__logo {
+    margin-top: 209px;
+    height: 34px;
+    width: 169px;
   }
 
   .header__menu__icon {

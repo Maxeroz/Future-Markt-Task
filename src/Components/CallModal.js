@@ -10,7 +10,7 @@ export function CallModal({ active, closeModal }) {
 
   // Refs to pick Elemets
   const inputEl = useRef(null);
-  const modalContainerEl = useRef(null);
+  const modalContainerElRef = useRef(null);
 
   // Effect to focus on NAME Input filed when componen is mounted
   useEffect(() => {
@@ -35,7 +35,7 @@ export function CallModal({ active, closeModal }) {
   // Effect to close modal using Overlay
   useEffect(() => {
     let handler = (e) => {
-      if (!modalContainerEl.current.contains(e.target)) {
+      if (!modalContainerElRef.current.contains(e.target)) {
         closeModal();
       }
     };
@@ -54,7 +54,7 @@ export function CallModal({ active, closeModal }) {
         active ? "call-modal-background active" : "call-modal-background"
       }`}
     >
-      <div className="call-modal-content" ref={modalContainerEl}>
+      <div className="call-modal-content" ref={modalContainerElRef}>
         <div className="call-modal-container">
           <div className="cross__small">
             <button onClick={closeModal}>
