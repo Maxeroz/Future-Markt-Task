@@ -2,28 +2,22 @@ import { Button } from "./Button";
 import vectorWhite from "../img/vectorWhite.svg";
 import crossSmall from "../img/cross_small.svg";
 import { useEffect, useRef, useState } from "react";
-import { act } from "react-dom/test-utils";
-
-{
-  /* <div
-      className={
-        active ? "call-modal-background active" : '"call-modal-background"'
-      }
-    >*/
-}
 
 export function CallModal({ active, closeModal }) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 
+  // Refs to pick Elemets
   const inputEl = useRef(null);
   const modalContainerEl = useRef(null);
 
+  // Effect to focus on NAME Input filed when componen is mounted
   useEffect(() => {
     inputEl.current.focus();
   }, [active]);
 
+  // Effect to close modal using Esc Button
   useEffect(() => {
     let handlerButton = (e) => {
       if (e.key === "Escape") {
@@ -38,11 +32,11 @@ export function CallModal({ active, closeModal }) {
     };
   }, [closeModal]);
 
+  // Effect to close modal using Overlay
   useEffect(() => {
     let handler = (e) => {
       if (!modalContainerEl.current.contains(e.target)) {
         closeModal();
-        console.log(modalContainerEl);
       }
     };
 

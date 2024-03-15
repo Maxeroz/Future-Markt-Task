@@ -340,15 +340,6 @@ footer {
   padding: 20px 16px 0px 16px;
   max-height: 600px;
   max-width: 320px;
-  /* max-height: 600px;
-  background-image: url(./img/background.svg);
-  background-size: 320px;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-color: #123056;
-  width: 320px;
-  min-width: 320px;
-  padding: 20px 16px 0px 16px; */
 }
 
 /* Call Modal */
@@ -357,15 +348,12 @@ footer {
   width: 100%;
   margin: 0 auto;
   height: 100vh;
-  /* width: 100%; */
   background-color: rgba(15, 29, 69, 0.6);
   position: fixed;
   top: 0;
   left: 0;
   max-height: 600px;
-  /* background-color: #0f1d45; */
   transform: scale(0);
-
   transition: 0.01s;
   backdrop-filter: blur(6px);
 }
@@ -386,9 +374,25 @@ footer {
   padding: 24px 34px 81px 34px;
 }
 
+.consult-modal-container {
+  margin: 0 auto;
+  padding: 40px 82px 40px 82px;
+}
+
 .call-modal-title {
   margin-top: 36px;
   width: 260px;
+}
+
+.consult-modal-title {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.consult-modal-title h2 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 157.8%;
 }
 
 .form-call-modal {

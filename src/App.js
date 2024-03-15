@@ -7,9 +7,11 @@ import { Main } from "./Components/Main.js";
 import { Footer } from "./Components/Footer.js";
 import { CallModal } from "./Components/CallModal.js";
 import { useEffect, useState } from "react";
+import { ConsultModal } from "./Components/ConsultModal.js";
 
 export default function App() {
   const [isCallOpen, setIsCallOpen] = useState(false);
+  const [isConsultOpen, setIsConsultOpen] = useState(false);
 
   function handleOnClick() {
     setIsCallOpen((is) => !is);
@@ -37,6 +39,7 @@ export default function App() {
         <Footer />
       </div>
       <CallModal active={isCallOpen} closeModal={() => setIsCallOpen(false)} />
+      <ConsultModal active={isConsultOpen} />
     </>
   );
 }
