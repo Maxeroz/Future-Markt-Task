@@ -33,7 +33,7 @@ export function CallModal({ active, closeModal }) {
         <div className="call-modal-container">
           <div className="cross__small">
             <button onClick={closeModal}>
-              <img src={crossSmall} />
+              <img src={crossSmall} className="cross_svg" />
             </button>
           </div>
           <div className="call-modal-title">
@@ -68,16 +68,21 @@ export function CallModal({ active, closeModal }) {
                 onChange={() => setIsChecked((is) => !is)}
               />
               <span className="custom-checkbox"></span>
-              <span className="input-text">
+              <span className="input-text__mobile">
                 Согласен на сохранение
                 <br />и обработку персональных данных
+              </span>
+              <span className="input-text">
+                Согласен на сохранение и обработку
+                <br />
+                персональных данных
               </span>
             </label>
           </form>
           <Button
             style={"btn__other__call"}
             square={"btn__trans-square"}
-            userStyle={{ height: "45px", width: "45px" }}
+            // userStyle={{ height: "45px", width: "45px" }}
             vector={vectorWhite}
             vectorStyle={"vector__white"}
             mainClass={"full_btn_call"}
