@@ -1,15 +1,25 @@
 @media (min-width: 0px) {
-  .header__appeal {
+  .header__appeal__phone {
+    display: block;
+  }
+  .shadowText__mobile {
+    display: block;
+  }
+  .input-text__mobile {
     display: block;
   }
 }
 
 @media (min-width: 320px) {
   body {
-    background-image: url("./img/desktop-bg.svg");
-    background-size: 100%;
+    background-image: url("./img/mentor_desktop.png"),
+      url("./img/desktop-bg.jpg");
+    background-position: bottom -40px right 15%;
+    background-repeat: no-repeat;
+    background-size: unset;
     max-height: 900px;
   }
+
   .main__page {
     padding: unset;
     padding-top: 40px;
@@ -43,6 +53,12 @@
     margin-right: 187px;
   }
 
+  .consult__modal__logo {
+    margin-top: 209px;
+    height: 34px;
+    width: 169px;
+  }
+
   .header__menu__icon {
     display: none;
   }
@@ -61,11 +77,158 @@
   }
 
   .header__appeal {
+    display: block;
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     width: 675px;
     max-width: 100%;
     font-size: 16px;
     line-height: 150%;
     padding-left: 24px;
+  }
+
+  .header__appeal__phone {
+    display: none;
+  }
+
+  .buttons {
+    height: 71px;
+    display: flex;
+    gap: 40px;
+  }
+
+  .full_btn {
+    width: 380px;
+    height: 71px;
+  }
+  .btn__white {
+    max-width: unset;
+    max-height: unset;
+    font-size: 18px;
+  }
+
+  .btn__other {
+    max-width: unset;
+    max-height: unset;
+    font-size: 18px;
+  }
+
+  .btn__white-square {
+    width: 72px;
+    height: 71px;
+    margin-left: auto;
+  }
+
+  .btn__trans-square {
+    width: 72px;
+    height: 71px;
+  }
+
+  .vector__blue {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 10px 0;
+  }
+
+  .vector__white {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 10px 0;
+  }
+  .footer {
+    margin-top: 105px;
+  }
+
+  .infoText {
+    padding-left: 24px;
+    height: 137px;
+  }
+
+  .infoText .text {
+    font-size: 40px;
+  }
+
+  .shadowText__mobile {
+    display: none;
+  }
+
+  .shadowText {
+    display: block;
+  }
+
+  .call-modal-background {
+    max-height: unset;
+  }
+
+  .call-modal-content {
+    margin: unset;
+    width: 612px;
+  }
+
+  .call-modal-container {
+    padding: 40px 32px 173px 75px;
+  }
+
+  .call-modal-title h2 {
+    font-size: 50px;
+    width: 490px;
+  }
+  .cross__small button {
+    width: 31px;
+    height: 31px;
+  }
+
+  .cross_svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .text-input {
+    font-size: 20px;
+    height: 25px;
+    padding-bottom: 11px;
+    width: 95%;
+  }
+
+  .form-call-div {
+    margin-top: 110px;
+    height: 42px;
+    margin-bottom: 89px;
+  }
+
+  .custom-checkbox {
+    width: 30px;
+    height: 30px;
+  }
+
+  .custom-checkbox::before {
+    height: 20px;
+    top: 5%;
+    width: 20px;
+  }
+
+  .input-text__mobile {
+    display: none;
+  }
+
+  .input-text {
+    display: block;
+    font-size: 16px;
+    margin-bottom: unset;
+    margin-left: 23px;
+    width: 342px;
+  }
+
+  .full_btn_call {
+    width: 380px;
+    height: 71px;
+  }
+
+  .btn__other__call {
+    font-size: 18px;
+  }
+
+  .btn__trans-square {
+    height: 71px;
+    width: 71px;
   }
 }

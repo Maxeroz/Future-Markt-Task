@@ -11,7 +11,7 @@ import { ConsultModal } from "./Components/ConsultModal.js";
 
 export default function App() {
   const [isCallOpen, setIsCallOpen] = useState(false);
-  const [isConsultOpen, setIsConsultOpen] = useState(false);
+  const [isConsultOpen, setIsConsultOpen] = useState(true);
 
   function handleOnClickCall() {
     setIsCallOpen((is) => !is);

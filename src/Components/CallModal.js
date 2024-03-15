@@ -107,7 +107,7 @@ export function CallModal({ active, closeModal }) {
           <Button
             style={"btn__other__call"}
             square={"btn__trans-square"}
-            // userStyle={{ height: "45px", width: "45px" }}
+            // userStyle={{ height: "46px", width: "46px" }}
             vector={vectorWhite}
             vectorStyle={"vector__white"}
             mainClass={"full_btn_call"}

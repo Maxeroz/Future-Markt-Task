@@ -25,7 +25,7 @@ export function Main({ handleOnClickCall, handleOnClickConsult }) {
           mainClass={"full_btn"}
           handler={handleOnClickConsult}
         >
-          Записаться на консультацию
+          Записаться
         </Button>
         <Button
           style={"btn__other"}

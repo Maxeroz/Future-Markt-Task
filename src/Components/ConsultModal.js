@@ -5,6 +5,7 @@ import { Logo } from "./Logo";
 export function ConsultModal({ active, closeModal }) {
   const modalContainerElRef = useRef(null);
 
+  // Effect to close modal after 3000ms
   useEffect(() => {
     let handler = () => {
       closeModal();

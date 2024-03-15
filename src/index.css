@@ -73,10 +73,10 @@ body {
 
   /* For 320 //////////////////////*/
 
-  /* background-image: url(./img/background.svg);
+  background-image: url(./img/background.jpg);
   background-size: 320px;
   background-position: top;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 
   background-color: #123056;
   min-width: 320px;
@@ -259,6 +259,7 @@ footer {
   font-size: 14px;
   font-weight: 600;
   /* max-width: 251px; */
+  height: 46px;
   /* max-height: 30px; */
   border: solid 1px;
   border-color: #fff;
@@ -313,7 +314,7 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   padding-left: 8px;
-  margin-right: 50px;
+  margin-right: 52px;
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   font-weight: 600;
   line-height: 141.3%;
@@ -379,6 +380,7 @@ footer {
 }
 
 .consult-modal-container {
+  background-image: url("./img/Consult_modal_bg.jpg");
   margin: 0 auto;
   padding: 40px 82px 40px 82px;
 }
@@ -488,6 +490,7 @@ footer {
   height: 15px;
   width: 15px;
   border: 1px solid rgba(255, 255, 255, 0.7);
+  margin-top: 3px;
 }
 
 .custom-checkbox::before {
@@ -562,6 +565,10 @@ nav ul li a:hover {
   .input-text__mobile {
     display: block;
   }
+
+  .form-call-div {
+    align-items: unset;
+  }
 }
 
 @media (min-width: 320px) {
@@ -570,7 +577,7 @@ nav ul li a:hover {
       url("./img/desktop-bg.jpg");
     background-position: bottom -40px right 15%;
     background-repeat: no-repeat;
-    /* background-size: 100%; */
+    background-size: unset;
     max-height: 900px;
   }
 
@@ -779,6 +786,7 @@ nav ul li a:hover {
 
   .btn__other__call {
     font-size: 18px;
+    height: 100%;
   }
 
   .btn__trans-square {
