@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { InfoText } from "../infoText";
+import { InfoText } from "./infoText";
 
 export function Footer() {
   const [percent, setPercent] = useState(null);

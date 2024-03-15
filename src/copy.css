@@ -1,20 +1,4 @@
-@media (min-width: 0px) {
-  .header__appeal__phone {
-    display: block;
-  }
-  .shadowText__mobile {
-    display: block;
-  }
-  .input-text__mobile {
-    display: block;
-  }
-
-  .form-call-div {
-    align-items: unset;
-  }
-}
-
-@media (min-width: 320px) {
+@media (min-width: 321px) {
   body {
     background-image: url("./img/mentor_desktop.png"),
       url("./img/desktop-bg.jpg");
@@ -103,7 +87,13 @@
   .full_btn {
     width: 380px;
     height: 71px;
+    transition: 0.5s;
   }
+
+  .full_btn:hover {
+    transform: scale(1.1);
+  }
+
   .btn__white {
     max-width: unset;
     max-height: unset;
@@ -122,7 +112,7 @@
     margin-left: auto;
   }
 
-  .btn__trans-square {
+  .call-modal-content .btn__trans-square {
     width: 72px;
     height: 71px;
   }
@@ -225,6 +215,11 @@
   .full_btn_call {
     width: 380px;
     height: 71px;
+    transition: 0.5s;
+  }
+
+  .full_btn_call:hover {
+    transform: scale(1.1);
   }
 
   .btn__other__call {
@@ -235,5 +230,13 @@
   .btn__trans-square {
     height: 71px;
     width: 71px;
+  }
+
+  .displayMobile {
+    display: none;
+  }
+
+  .displayDesktop {
+    display: unset;
   }
 }

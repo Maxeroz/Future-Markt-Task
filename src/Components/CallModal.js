@@ -20,7 +20,6 @@ export function CallModal({ active, closeModal }) {
 
   const onSubmit = (data) => {
     reset();
-    alert(JSON.stringify(data));
     closeModal();
 
     // Saving data to Local Storage

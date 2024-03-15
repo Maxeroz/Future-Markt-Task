@@ -25,7 +25,8 @@ export function Main({ handleOnClickCall, handleOnClickConsult }) {
           mainClass={"full_btn"}
           handler={handleOnClickConsult}
         >
-          Записаться
+          <span className="displayMobile">Записаться</span>
+          <span className="displayDesktop">Записаться на консультацию</span>
         </Button>
         <Button
           style={"btn__other"}
@@ -36,7 +37,8 @@ export function Main({ handleOnClickCall, handleOnClickConsult }) {
           mainClass={"full_btn"}
           handler={handleOnClickCall}
         >
-          Заказать звонок
+          <span className="displayMobile">Заказать звонок</span>
+          <span className="displayDesktop">Бесплатная консультация</span>
         </Button>
       </div>
     </main>

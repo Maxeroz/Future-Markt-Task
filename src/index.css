@@ -515,6 +515,14 @@ footer {
   text-align: right;
 }
 
+.cross__small button {
+  transition: 0.5s;
+}
+
+.cross__small button:hover {
+  transform: scale(1.2);
+}
+
 .nav__menu {
   display: none;
   max-width: 100%;
@@ -553,7 +561,15 @@ nav ul li a:hover {
   /* width: 150px; */
 }
 
-/* Media /////////////////////////// */
+.displayMobile {
+  display: none;
+}
+
+.displayDesktop {
+  display: none;
+}
+
+/* Media ///////////////////////////////////////////////////////////////// */
 
 @media (min-width: 0px) {
   .header__appeal__phone {
@@ -577,9 +593,32 @@ nav ul li a:hover {
   .form-call-modal .btn__other__call {
     font-weight: 400;
   }
+
+  .displayMobile {
+    display: unset;
+  }
+
+  .consult-modal-container {
+    background-image: unset;
+    padding: unset;
+    padding: 24px 34px 81px 34px;
+  }
+
+  .consult-modal-title {
+    margin-top: 80px;
+    margin-bottom: 120px;
+  }
+
+  .consult-modal-title h2 {
+    font-size: 25px;
+  }
+
+  .consult-modal-title h3 {
+    font-size: 20px;
+  }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 321px) {
   body {
     background-image: url("./img/mentor_desktop.png"),
       url("./img/desktop-bg.jpg");
@@ -668,7 +707,13 @@ nav ul li a:hover {
   .full_btn {
     width: 380px;
     height: 71px;
+    transition: 0.5s;
   }
+
+  .full_btn:hover {
+    transform: scale(1.1);
+  }
+
   .btn__white {
     max-width: unset;
     max-height: unset;
@@ -790,6 +835,11 @@ nav ul li a:hover {
   .full_btn_call {
     width: 380px;
     height: 71px;
+    transition: 0.5s;
+  }
+
+  .full_btn_call:hover {
+    transform: scale(1.1);
   }
 
   .btn__other__call {
@@ -800,5 +850,13 @@ nav ul li a:hover {
   .btn__trans-square {
     height: 71px;
     width: 71px;
+  }
+
+  .displayMobile {
+    display: none;
+  }
+
+  .displayDesktop {
+    display: unset;
   }
 }
