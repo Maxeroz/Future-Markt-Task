@@ -23,7 +23,7 @@ export function Main({ handleOnClickCall, handleOnClickConsult }) {
           vector={vectorBlue}
           vectorStyle={"vector__blue"}
           mainClass={"full_btn"}
-          handler={handleOnClickConsult}
+          handler={handleOnClickCall}
         >
           <span className="displayMobile">Записаться</span>
           <span className="displayDesktop">Записаться на консультацию</span>
@@ -31,7 +31,6 @@ export function Main({ handleOnClickCall, handleOnClickConsult }) {
         <Button
           style={"btn__other"}
           square={"btn__trans-square"}
-          // userStyle={{ height: "30px" }}
           vector={vectorWhite}
           vectorStyle={"vector__white"}
           mainClass={"full_btn"}

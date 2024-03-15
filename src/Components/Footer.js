@@ -6,11 +6,9 @@ export function Footer() {
   const [technique, setTechnique] = useState(null);
 
   // JS Framework TASK 1 and TASK 2:
-
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch("https://www.cbr-xml-daily.ru/daily_json.js");
-
       const json = await data.json();
 
       const sum = json.Date.replaceAll("-", "")

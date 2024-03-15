@@ -239,4 +239,23 @@
   .displayDesktop {
     display: unset;
   }
+
+  .consult-modal-container {
+    background-image: url("./img/Consult_modal_bg.jpg");
+    padding: 40px 82px 40px 82px;
+    background-color: unset;
+  }
+
+  .consult-modal-title {
+    margin-top: 120px;
+    margin-bottom: unset;
+  }
+
+  .consult-modal-title h2 {
+    font-size: 50px;
+  }
+
+  .consult-modal-title h3 {
+    font-size: 40px;
+  }
 }

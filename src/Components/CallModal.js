@@ -4,9 +4,7 @@ import crossSmall from "../img/cross_small.svg";
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
-export function CallModal({ active, closeModal }) {
-  // const [name, setName] = useState("");
-  // const [phone, setPhone] = useState("");
+export function CallModal({ active, closeModal, handleOnClickConsult }) {
   const [isChecked, setIsChecked] = useState(false);
 
   // Hook Form ///////////////////////////////
@@ -21,6 +19,7 @@ export function CallModal({ active, closeModal }) {
   const onSubmit = (data) => {
     reset();
     closeModal();
+    handleOnClickConsult();
 
     // Saving data to Local Storage
     localStorage.setItem("data", JSON.stringify(data));
@@ -70,7 +69,6 @@ export function CallModal({ active, closeModal }) {
   }, [closeModal]);
 
   return (
-    // <div className="call-modal-background">
     <div
       className={`${
         active ? "call-modal-background active" : "call-modal-background"
@@ -131,7 +129,6 @@ export function CallModal({ active, closeModal }) {
             <Button
               style={"btn__other__call"}
               square={"btn__trans-square"}
-              // userStyle={{ height: "46px", width: "46px" }}
               vector={vectorWhite}
               vectorStyle={"vector__white"}
               mainClass={"full_btn_call"}
