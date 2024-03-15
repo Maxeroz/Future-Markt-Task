@@ -8,6 +8,10 @@
   .input-text__mobile {
     display: block;
   }
+
+  .form-call-div {
+    align-items: unset;
+  }
 }
 
 @media (min-width: 320px) {
@@ -184,8 +188,8 @@
 
   .text-input {
     font-size: 20px;
-    height: 25px;
-    padding-bottom: 11px;
+    height: 30px;
+    padding-bottom: 2px;
     width: 95%;
   }
 
@@ -225,6 +229,7 @@
 
   .btn__other__call {
     font-size: 18px;
+    height: 100%;
   }
 
   .btn__trans-square {

@@ -9,7 +9,6 @@ export function ConsultModal({ active, closeModal }) {
   useEffect(() => {
     let handler = () => {
       closeModal();
-      console.log("Hello");
     };
 
     setTimeout(() => {
@@ -20,36 +19,6 @@ export function ConsultModal({ active, closeModal }) {
       clearTimeout(handler);
     };
   }, []);
-
-  // Effect to close modal using Esc Button
-  useEffect(() => {
-    let handlerButton = (e) => {
-      if (e.key === "Escape") {
-        closeModal();
-      }
-    };
-
-    document.addEventListener("keydown", handlerButton);
-
-    return () => {
-      document.removeEventListener("keydown", handlerButton);
-    };
-  }, [closeModal]);
-
-  // Effect to close modal using Overlay
-  useEffect(() => {
-    let handler = (e) => {
-      if (!modalContainerElRef.current.contains(e.target)) {
-        closeModal();
-      }
-    };
-
-    document.addEventListener("mousedown", handler);
-
-    return () => {
-      document.removeEventListener("mousedown", handler);
-    };
-  }, [closeModal]);
 
   return (
     <div className="call-modal-background active">

@@ -10,7 +10,6 @@ export function CallModal({ active, closeModal }) {
   const [isChecked, setIsChecked] = useState(false);
 
   // Hook Form ///////////////////////////////
-
   const {
     register,
     formState: { errors },
@@ -23,11 +22,15 @@ export function CallModal({ active, closeModal }) {
     reset();
     alert(JSON.stringify(data));
     closeModal();
+
+    // Saving data to Local Storage
+    localStorage.setItem("data", JSON.stringify(data));
   };
 
   // Refs to pick Elemets
   const modalContainerElRef = useRef(null);
 
+  // Effect to focus on Input First Name
   useEffect(() => {
     setFocus("firstName");
   }, [setFocus]);

@@ -569,6 +569,14 @@ nav ul li a:hover {
   .form-call-div {
     align-items: unset;
   }
+
+  .form-call-modal .btn__trans-square {
+    height: 46px;
+    width: 46px;
+  }
+  .form-call-modal .btn__other__call {
+    font-weight: 400;
+  }
 }
 
 @media (min-width: 320px) {
@@ -679,7 +687,7 @@ nav ul li a:hover {
     margin-left: auto;
   }
 
-  .btn__trans-square {
+  .call-modal-content .btn__trans-square {
     width: 72px;
     height: 71px;
   }
