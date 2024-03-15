@@ -2,19 +2,39 @@ import { Button } from "./Button";
 import vectorWhite from "../img/vectorWhite.svg";
 import crossSmall from "../img/cross_small.svg";
 import { useEffect, useRef, useState } from "react";
+import { useForm } from "react-hook-form";
 
 export function CallModal({ active, closeModal }) {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  // const [name, setName] = useState("");
+  // const [phone, setPhone] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 
+  // Hook Form ///////////////////////////////
+
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+    setFocus,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    reset();
+    alert(JSON.stringify(data));
+    closeModal();
+  };
+
   // Refs to pick Elemets
-  const inputEl = useRef(null);
   const modalContainerElRef = useRef(null);
+
+  useEffect(() => {
+    setFocus("firstName");
+  }, [setFocus]);
 
   // Effect to focus on NAME Input filed when componen is mounted
   useEffect(() => {
-    inputEl.current.focus();
+    // inputEl.current.focus();
   }, [active]);
 
   // Effect to close modal using Esc Button
@@ -68,29 +88,32 @@ export function CallModal({ active, closeModal }) {
               обратный звонок
             </h2>
           </div>
-          <form className="form-call-modal">
+
+          <form className="form-call-modal" onSubmit={handleSubmit(onSubmit)}>
             <input
-              name="name"
+              {...register("firstName", {
+                required: true,
+                minLength: 5,
+              })}
               placeholder="ИМЯ"
               className="text-input"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              ref={inputEl}
             />
+
             <input
-              name="phone"
+              {...register("phone", {
+                required: true,
+                minLength: 10,
+              })}
               placeholder="ТЕЛЕФОН"
               className="form-call-phone text-input"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
             />
             <label className="form-call-div">
               <input
+                {...register("checked", {
+                  required: true,
+                })}
                 type="checkbox"
-                name="myCheckBox"
                 className="form-real-checkbox"
-                checked={isChecked}
-                onChange={() => setIsChecked((is) => !is)}
               />
               <span className="custom-checkbox"></span>
               <span className="input-text__mobile">
@@ -103,17 +126,17 @@ export function CallModal({ active, closeModal }) {
                 персональных данных
               </span>
             </label>
+            <Button
+              style={"btn__other__call"}
+              square={"btn__trans-square"}
+              // userStyle={{ height: "46px", width: "46px" }}
+              vector={vectorWhite}
+              vectorStyle={"vector__white"}
+              mainClass={"full_btn_call"}
+            >
+              Заказать обратный звонок
+            </Button>
           </form>
-          <Button
-            style={"btn__other__call"}
-            square={"btn__trans-square"}
-            // userStyle={{ height: "46px", width: "46px" }}
-            vector={vectorWhite}
-            vectorStyle={"vector__white"}
-            mainClass={"full_btn_call"}
-          >
-            Заказать обратный звонок
-          </Button>
         </div>
       </div>
     </div>

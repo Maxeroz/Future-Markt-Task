@@ -11,7 +11,7 @@ import { ConsultModal } from "./Components/ConsultModal.js";
 
 export default function App() {
   const [isCallOpen, setIsCallOpen] = useState(false);
-  const [isConsultOpen, setIsConsultOpen] = useState(true);
+  const [isConsultOpen, setIsConsultOpen] = useState(false);
 
   function handleOnClickCall() {
     setIsCallOpen((is) => !is);
@@ -38,15 +38,18 @@ export default function App() {
         />
         <Footer />
       </div>
-      <CallModal active={isCallOpen} closeModal={() => setIsCallOpen(false)} />
+      {isCallOpen && (
+        <CallModal
+          active={isCallOpen}
+          closeModal={() => setIsCallOpen(false)}
+        />
+      )}
 
-      {isConsultOpen ? (
+      {isConsultOpen && (
         <ConsultModal
           active={isConsultOpen}
           closeModal={() => setIsConsultOpen(false)}
         />
-      ) : (
-        ""
       )}
     </>
   );

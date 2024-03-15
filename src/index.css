@@ -424,7 +424,7 @@ footer {
   text-decoration: none;
   box-shadow: none;
   border-radius: 0;
-  height: 20px;
+  height: 30px;
   line-height: 122.8%;
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
@@ -745,8 +745,8 @@ nav ul li a:hover {
 
   .text-input {
     font-size: 20px;
-    height: 25px;
-    padding-bottom: 11px;
+    height: 30px;
+    padding-bottom: 2px;
     width: 95%;
   }
 
