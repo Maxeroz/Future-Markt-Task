@@ -14,7 +14,7 @@ export function CallModal({ active, closeModal, handleOnClickConsult }) {
     handleSubmit,
     reset,
     setFocus,
-  } = useForm();
+  } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
     reset();
@@ -90,23 +90,37 @@ export function CallModal({ active, closeModal, handleOnClickConsult }) {
           </div>
 
           <form className="form-call-modal" onSubmit={handleSubmit(onSubmit)}>
-            <input
-              {...register("firstName", {
-                required: true,
-                minLength: 5,
-              })}
-              placeholder="ИМЯ"
-              className="text-input"
-            />
+            <label>
+              <input
+                {...register("firstName", {
+                  required: "Поле обязательно к заполнению",
+                  minLength: { value: 5, message: "Минимум 5 символов" },
+                })}
+                placeholder="ИМЯ"
+                className="text-input"
+              />
+              <div className="input-validation-container">
+                {errors?.firstName ? (
+                  <p>{errors.firstName.message}</p>
+                ) : (
+                  <p></p>
+                )}
+              </div>
+            </label>
 
-            <input
-              {...register("phone", {
-                required: true,
-                minLength: 10,
-              })}
-              placeholder="ТЕЛЕФОН"
-              className="form-call-phone text-input"
-            />
+            <label>
+              <input
+                {...register("phone", {
+                  required: "Поле обязательно к заполнению",
+                  minLength: { value: 10, message: "Минимум 10 символов" },
+                })}
+                placeholder="ТЕЛЕФОН"
+                className="form-call-phone text-input"
+              />
+              <div className="input-validation-container">
+                {errors?.phone ? <p>{errors.phone.message}</p> : <p></p>}
+              </div>
+            </label>
             <label className="form-call-div">
               <input
                 {...register("checked", {

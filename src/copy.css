@@ -1,4 +1,4 @@
-@media (min-width: 321px) {
+@media (min-width: 320px) {
   body {
     background-image: url("./img/mentor_desktop.png"),
       url("./img/desktop-bg.jpg");
@@ -9,18 +9,14 @@
   }
 
   .main__page {
+    background-image: unset;
     padding: unset;
     padding-top: 40px;
     margin: 0 auto;
     width: 1320px;
-    /* width: 100%; */
     min-width: 1320px;
-    /* background-image: url("./img/desktop-bg.svg"); */
     background-size: auto;
-    /* padding: 40px 300px 0px 300px; */
-    /* margin: 0 auto; */
     font-weight: 200;
-    /* background-position: 0%; */
   }
 
   .space__div {
@@ -184,9 +180,12 @@
   }
 
   .form-call-div {
-    margin-top: 110px;
+    margin-top: 70px;
     height: 42px;
     margin-bottom: 89px;
+  }
+
+  .input-validation-container {
   }
 
   .custom-checkbox {

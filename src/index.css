@@ -393,7 +393,7 @@ footer {
 }
 
 .form-call-phone {
-  margin-top: 49px;
+  margin-top: 9px;
 }
 
 .text-input {
@@ -557,6 +557,7 @@ nav ul li a:hover {
 
   .form-call-div {
     align-items: unset;
+    margin-top: 20px;
   }
 
   .form-call-modal .btn__trans-square {
@@ -592,6 +593,15 @@ nav ul li a:hover {
 
   .infoText {
     margin-right: 26px;
+  }
+
+  .form-call-phone {
+    margin-top: unset;
+  }
+
+  .input-validation-container {
+    height: 10px;
+    font-size: 10px;
   }
 }
 
@@ -779,9 +789,12 @@ nav ul li a:hover {
   }
 
   .form-call-div {
-    margin-top: 110px;
+    margin-top: 70px;
     height: 42px;
     margin-bottom: 89px;
+  }
+
+  .input-validation-container {
   }
 
   .custom-checkbox {
@@ -852,5 +865,10 @@ nav ul li a:hover {
 
   .consult-modal-title h3 {
     font-size: 40px;
+  }
+
+  .input-validation-container {
+    height: 40px;
+    font-size: 20px;
   }
 }
